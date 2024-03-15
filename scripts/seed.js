@@ -161,8 +161,10 @@ async function seedRevenue(client) {
 }
 
 async function main() {
+  // 连接数据库
   const client = await db.connect();
 
+  // 生成数据
   await seedUsers(client);
   await seedCustomers(client);
   await seedInvoices(client);

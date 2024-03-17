@@ -11,8 +11,11 @@ export default async function InvoicesTable({
   query: string;
   currentPage: number;
 }) {
+  console.log(`query: ${query}`);
   const invoices = await fetchFilteredInvoices(query, currentPage);
-
+  console.log("updating");
+  console.log(invoices);
+  console.log("updated");
   return (
     <div className="mt-6 flow-root">
       <div className="inline-block min-w-full align-middle">
